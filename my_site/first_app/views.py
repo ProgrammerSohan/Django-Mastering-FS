@@ -19,7 +19,8 @@ def news_view(request,topic):
 def add_view(request,num1,num2):
     # domain.com/first_app/num1/num2 --> num1+num2
     # domain.com/first_app/3/4 --> 72
-    result = num1 + num2
+    add_result = num1 + num2
+    result = f"{num1}+{num2} = {add_result}"
     return HttpResponse(str(result))
 
 
