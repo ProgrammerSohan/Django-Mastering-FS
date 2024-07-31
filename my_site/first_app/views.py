@@ -13,6 +13,11 @@ articles = {
 
 }
 
+def news_view(request,topic):
+    return HttpResponse(articles[topic])
+
+
+""" 
 def sports_view(request):
    # return HttpResponse("Sports Page")
    return HttpResponse(articles['sports'])
@@ -20,6 +25,6 @@ def sports_view(request):
 def finance_view(request):
    # return HttpResponse("Finance Page")
    return HttpResponse(articles['finance'])
-
+""" 
 
 
