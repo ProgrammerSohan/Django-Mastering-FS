@@ -16,6 +16,12 @@ articles = {
 def news_view(request,topic):
     return HttpResponse(articles[topic])
 
+def add_view(request,num1,num2):
+    # domain.com/first_app/num1/num2 --> num1+num2
+    # domain.com/first_app/3/4 --> 72
+    result = num1 + num2
+    return HttpResponse(str(result))
+
 
 """ 
 def sports_view(request):
