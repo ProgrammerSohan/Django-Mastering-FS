@@ -5,11 +5,21 @@ from django.http.response import HttpResponse
 def simple_view(request):
     return HttpResponse("Simple view by Sohan") #template html file (jinja)
 """
+
+articles = {
+    'sports':'Sports Page',
+    'finance':'Finance Page',
+    'politics':'Politics Page'
+
+}
+
 def sports_view(request):
-    return HttpResponse("Sports Page")
+   # return HttpResponse("Sports Page")
+   return HttpResponse(articles['sports'])
     
 def finance_view(request):
-    return HttpResponse("Finance Page")
+   # return HttpResponse("Finance Page")
+   return HttpResponse(articles['finance'])
 
 
 
